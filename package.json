@@ -1,0 +1,18 @@
+{
+  "name": "language-mod",
+  "main": "./lib/language-mod",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "language-mod:toggle"
+  },
+  "repository": "https://github.com/cjblack/language-mod",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

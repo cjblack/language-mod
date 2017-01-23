@@ -1,0 +1,44 @@
+'scopeName': 'source.mod'
+'name': 'mod'
+'fileTypes': 'mod'
+'patterns': [
+  {
+    # Stylizing the blocks
+    'match': '\\b(NEURON|PARAMETER|ASSIGNED|STATE|BREAKPOINT|INITIAL|DERIVATIVE|UNITSOFF|UNITSON|INDEPENDENT|UNITS|LOCAL|PROCEDURE)\\b'
+    'name': 'support.function.mod'
+  }
+  {
+    # Stylizing specific variables
+    'match': '\\b(SUFFIX|USEION|READ|WRITE|RANGE|GLOBAL|SOLVE|METHOD)\\b'
+    'name': 'support.variable.mod'
+  }
+  {
+    # Stylizing equations
+    'match': '/*[0-9]'
+    'name': 'support.class.mod'
+
+  }
+  {
+    # Match units
+    'match': '(?:[(][(micron|picosiemen|milliamp|millivolt|millisecond|ms|mV|mA|pS|um|cm|cm2|mM|/|degC)]+[)])'
+    'name': 'variable.language.mod'
+  }
+  {
+    # Stylizing comments
+    'begin': ':'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.mod'
+    'end': '\\n'
+    'name': 'comment.line.colon.mod'
+  }
+  {
+    'begin': 'COMMENT'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.comment.mod'
+    'end': '\\n'
+    'end': 'ENDCOMMENT'
+    'name': 'comment.line.colon.mod'
+    }
+]
